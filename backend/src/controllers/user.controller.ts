@@ -18,7 +18,7 @@ export const createUserHandler = async (
     res.status(500).json({
       success: false,
       message: "Failed to create user",
-      error
+      err
     });
   }
 };
