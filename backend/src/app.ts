@@ -1,6 +1,5 @@
 import express from 'express';
-import userRoute from './routes/user.route'
-
+import authRoutes from './routes/auth.route';
 const app = express();
 
 app.use(express.json());
@@ -14,6 +13,6 @@ app.get("/" , (req,res) => {
     });
 });
 
-app.use("/api/users" , userRoute);
+app.use('/api/auth'  , authRoutes);
 
 export default app;
